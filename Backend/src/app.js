@@ -1,4 +1,5 @@
 require('dotenv').config();
+console.log('DB URL:', process.env.DATABASE_URL ? 'loaded' : 'MISSING')
 const express = require('express')
 const cors = require('cors');
 const productRoutes = require('./routes/products')
