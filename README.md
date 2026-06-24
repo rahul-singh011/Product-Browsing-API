@@ -4,7 +4,7 @@ A full-stack product browsing application built on cursor-based pagination over 
 
 **Frontend** → https://product-shelf-zeta.vercel.app  
 **Backend API** → https://product-browsing-api-49iq.onrender.com  
-**Repo** → https://github.com/rahul-singh011/Product-Browsing-API
+
 
 ---
 
@@ -60,29 +60,6 @@ sequenceDiagram
 Index Scan using idx_products_created_at_id  →  Execution Time: 0.147ms
 ```
 PostgreSQL jumps directly to the cursor position using the compound index instead of scanning all 200,000 rows.
-
----
-
-## Project Structure
-
-```
-Product-Browsing-API/
-├── backend/
-│   ├── src/
-│   │   ├── app.js           # Express setup
-│   │   ├── db.js            # PostgreSQL pool
-│   │   └── routes/
-│   │       └── products.js  # Pagination endpoint
-│   ├── scripts/
-│   │   └── seed.js          # Bulk insert 200k products
-│   └── package.json
-└── frontend/
-    ├── src/
-    │   ├── App.jsx          # Main UI component
-    │   ├── App.css          # Styles
-    │   └── main.jsx
-    └── package.json
-```
 
 ---
 
